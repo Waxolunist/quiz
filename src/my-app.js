@@ -10,8 +10,6 @@
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
 import { setPassiveTouchGestures, setRootPath } from '@polymer/polymer/lib/utils/settings.js';
-import '@polymer/app-layout/app-drawer/app-drawer.js';
-import '@polymer/app-layout/app-drawer-layout/app-drawer-layout.js';
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-header-layout/app-header-layout.js';
 import '@polymer/app-layout/app-scroll-effects/app-scroll-effects.js';
@@ -40,10 +38,6 @@ class MyApp extends PolymerElement {
           --app-secondary-color: black;
 
           display: block;
-        }
-
-        app-drawer-layout:not([narrow]) [drawer-toggle] {
-          display: none;
         }
 
         app-header {
@@ -79,23 +73,11 @@ class MyApp extends PolymerElement {
       <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
       </app-route>
 
-      <app-drawer-layout fullbleed="" narrow="{{narrow}}">
-        <!-- Drawer content -->
-        <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
-          <app-toolbar>Menu</app-toolbar>
-          <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-            <a name="view1" href="[[rootPath]]view1">View One</a>
-            <a name="view2" href="[[rootPath]]view2">View Two</a>
-            <a name="view3" href="[[rootPath]]view3">View Three</a>
-          </iron-selector>
-        </app-drawer>
-
         <!-- Main content -->
-        <app-header-layout has-scrolling-region="">
+        <app-header-layout has-scrolling-region="" fullbleed="">
 
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
-              <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
               <div main-title="">My App</div>
             </app-toolbar>
           </app-header>
@@ -107,7 +89,6 @@ class MyApp extends PolymerElement {
             <my-view404 name="view404"></my-view404>
           </iron-pages>
         </app-header-layout>
-      </app-drawer-layout>
     `;
   }
 
@@ -140,11 +121,6 @@ class MyApp extends PolymerElement {
       this.page = page;
     } else {
       this.page = 'view404';
-    }
-
-    // Close a non-persistent drawer when the page & route are changed.
-    if (!this.$.drawer.persistent) {
-      this.$.drawer.close();
     }
   }
 
