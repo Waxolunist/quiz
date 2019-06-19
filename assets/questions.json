@@ -1,0 +1,18 @@
+{
+    "questions": [{
+            "id": 1,
+            "title": "Zahlenreihe",
+            "template": "question-01",
+            "answer": "6",
+            "link": "https://www.logisch-gedacht.de/knobeleien/zahlenreihe/"
+        },
+
+        {
+            "id": 2,
+            "title": "Der fehlende Schlüssel",
+            "template": "question-02",
+            "answer": "87",
+            "link": "https://www.logisch-gedacht.de/zahlenraetsel/fehlender-schluessel/"
+        }
+    ]
+}
