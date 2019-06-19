@@ -9,14 +9,14 @@
  */
 
 import {
-  PolymerElement,
-  html
+    html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
+import { QuestionViewElement } from './view-element';
 
-class NextHintView extends PolymerElement {
-  static get template() {
-    return html `
+class NextHintView extends QuestionViewElement {
+    static get template() {
+        return html `
       <style include="shared-styles">
         :host {
           display: block;
@@ -49,25 +49,11 @@ class NextHintView extends PolymerElement {
         </div>
       </div>
     `;
-  }
-
-  static get properties() {
-    return {
-        questionId: {
-            type: String,
-            observer: '_questionChanged',
-        },
-        question: Object
-    };
-  }
-
-  _questionChanged(q) {
-    let qObj = localStorage.getItem(q);
-    if (qObj) {
-        this.question = JSON.parse(qObj);
     }
-    return q;
-  }
+
+    static get properties() {
+        return {};
+    }
 }
 
 window.customElements.define('nexthint-view', NextHintView);

@@ -9,15 +9,15 @@
  */
 
 import {
-  PolymerElement,
-  html
+    html
 } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
+import { QuestionViewElement } from './view-element';
 import QrScanner from 'qr-scanner';
 
-class ScannerView extends PolymerElement {
-  static get template() {
-    return html `
+class ScannerView extends QuestionViewElement {
+    static get template() {
+        return html `
       <style include="shared-styles">
         :host {
           display: block;
@@ -33,20 +33,22 @@ class ScannerView extends PolymerElement {
         <video id="qrscanner"></video>
       </div>
     `;
-  }
+    }
 
-  ready() {
-    super.ready();
-    const videoElem = this.shadowRoot.getElementById('qrscanner');
-    QrScanner.WORKER_PATH = '../node_modules/qr-scanner/qr-scanner-worker.min.js';
-    this._qrScanner = new QrScanner(videoElem, result => console.log('decoded qr code:', result));
-    this._qrScanner.start();
-  }
+    ready() {
+        super.ready();
+        const videoElem = this.shadowRoot.getElementById('qrscanner');
+        QrScanner.WORKER_PATH = '../node_modules/qr-scanner/qr-scanner-worker.min.js';
+        this._qrScanner = new QrScanner(videoElem, result => console.log('decoded qr code:', result));
+        this._qrScanner.start();
 
-  detached() {
-    this._qrScanner.destroy();
-    this._qrScanner = null;
-  }
+        this._playsound('correct');
+    }
+
+    detached() {
+        this._qrScanner.destroy();
+        this._qrScanner = null;
+    }
 }
 
 window.customElements.define('scanner-view', ScannerView);

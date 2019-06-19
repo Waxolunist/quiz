@@ -90,8 +90,12 @@ Looking for our older PSK2 Polycast or migration blog post? See [the previous RE
 
 ## Sounds
 
-https://www.audioblocks.com/royalty-free-audio/game+showl
+https://www.audioblocks.com/royalty-free-audio/game+show
 
 ## QR Codes
 
 https://www.qrcode-generator.de/
+
+## Rätsel
+
+https://www.janko.at/Raetsel/Gedichte/5914.htm

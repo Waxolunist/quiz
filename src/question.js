@@ -8,11 +8,12 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import { html } from '@polymer/polymer/polymer-element.js';
 import './shared-styles.js';
+import { QuestionViewElement } from './view-element';
 import '@polymer/paper-button/paper-button.js';
 
-class QuestionView extends PolymerElement {
+class QuestionView extends QuestionViewElement {
     static get template() {
         return html `
       <style include="shared-styles">
@@ -60,22 +61,12 @@ class QuestionView extends PolymerElement {
 
     static get properties() {
         return {
-            questionId: {
-                type: String,
-                observer: '_questionChanged',
-            },
-            question: Object,
             questionTemplate: String
         };
     }
 
-    _questionChanged(q) {
-        let qObj = localStorage.getItem(q);
-        if (qObj) {
-            this.question = JSON.parse(qObj);
-            this.questionTemplate = localStorage.getItem('template-' + this.question.template);
-        }
-        return q;
+    _onQuestionLoaded(question) {
+        this.questionTemplate = localStorage.getItem('template-' + question.template);
     }
 
     _onSolution(event) {

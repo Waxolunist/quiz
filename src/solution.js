@@ -8,14 +8,15 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import { html } from '@polymer/polymer/polymer-element.js';
+import { QuestionViewElement } from './view-element';
 import './shared-styles.js';
 import '@polymer/iron-icon/iron-icon.js';
 import './my-icons.js';
 
-class SolutionView extends PolymerElement {
-  static get template() {
-    return html `
+class SolutionView extends QuestionViewElement {
+    static get template() {
+        return html `
       <style include="shared-styles">
         :host {
           display: block;
@@ -54,7 +55,7 @@ class SolutionView extends PolymerElement {
           position: absolute;
           top: 35px;
           white-space: pre;
-          font-size: 26pt;
+          font-size: 20pt;
         }
 
         .input-wrapper label {
@@ -64,7 +65,7 @@ class SolutionView extends PolymerElement {
 
         .input-wrapper input#solutioninput {
           position: relative;
-          font-size: 50pt;
+          font-size: 33pt;
           z-index: 2;
           border: none;
           background: transparent;
@@ -152,93 +153,79 @@ class SolutionView extends PolymerElement {
         </div>
       </div>
     `;
-  }
-
-  static get properties() {
-    return {
-        questionId: {
-            type: String,
-            observer: '_questionChanged',
-        },
-        question: Object,
-        _styleSheet: Object
-    };
-  }
-
-  connectedCallback() {
-    super.connectedCallback();
-    this._prepareDynamicStyleSheet();
-    this._configureInputField();
-  }
-
-  _prepareDynamicStyleSheet() {
-    if(!this._styleSheet) {
-      var styleEl = document.createElement('style');
-      this.shadowRoot.appendChild(styleEl);
-      this._styleSheet = styleEl.sheet;
     }
-  }
 
-  _questionChanged(q) {
-    let qObj = localStorage.getItem(q);
-    if (qObj) {
-        this.question = JSON.parse(qObj);
+    static get properties() {
+        return {
+            _styleSheet: Object
+        };
+    }
+
+    connectedCallback() {
+        super.connectedCallback();
+        this._prepareDynamicStyleSheet();
         this._configureInputField();
     }
-    return q;
-  }
 
-  _configureInputField() {
-    if(this.question) {
-      let length = this.question.answer.length;
-      this.$.solutioninput.minLength = length;
-      this.$.solutioninput.maxLength = length;
-      this.$.solutioninput.size = length;
-
-      if(Number.isInteger(parseInt(this.question.answer))) {
-        this.$.solutioninput.inputMode = "number";
-      }
-
-      this._injectStyles(this._createContentRule(length));
+    _onQuestionLoaded(question) {
+        this._configureInputField();
     }
-  }
 
-  _createContentRule(length) {
-    let contentString = Array(length+1).join('___ ').trim();
-    return `.input-wrapper fieldset::after { content: "${contentString}"; }`;
-  }
-
-  _injectStyles(rule) {
-    if(this._styleSheet) {
-      this._styleSheet.insertRule(rule, 0);
+    _prepareDynamicStyleSheet() {
+        if (!this._styleSheet) {
+            var styleEl = document.createElement('style');
+            this.shadowRoot.appendChild(styleEl);
+            this._styleSheet = styleEl.sheet;
+        }
     }
-  }
 
-  _inputchanged() {
-    let value = this.$.solutioninput.value;
-    this.$.result.classList.remove('ok');
-    this.$.result.classList.remove('nok');
-    if(this.question && value.length === this.question.answer.length) {
-      this._validate(this.question.answer, value);
+    _configureInputField() {
+        if (this.question) {
+            let length = this.question.answer.length;
+            this.$.solutioninput.minLength = length;
+            this.$.solutioninput.maxLength = length;
+            this.$.solutioninput.size = length;
+
+            if (Number.isInteger(parseInt(this.question.answer))) {
+                this.$.solutioninput.inputMode = "number";
+            }
+
+            this._injectStyles(this._createContentRule(length));
+        }
     }
-  }
 
-  _validate(expected, actual) {
-    if(expected == actual) {
-      this.$.result.classList.add('ok');
-      this._playsound('correct', e => location.href = '/nexthint/' + this.questionId);
-    } else {
-      this.$.result.classList.add('nok');
+    _createContentRule(length) {
+        let contentString = Array(length + 1).join('___ ').trim();
+        return `.input-wrapper fieldset::after { content: "${contentString}"; }`;
     }
-  }
 
-  _playsound(name, cb) {
-    var sound = new Howl({
-      src: ['/assets/sounds/' + name + '.mp3']
-    })
-    sound.on('end', event => setTimeout(e => cb(event), 1500));
-    sound.play();
-  }
+    _injectStyles(rule) {
+        if (this._styleSheet) {
+            this._styleSheet.insertRule(rule, 0);
+        }
+    }
+
+    _inputchanged() {
+        let value = this.$.solutioninput.value;
+        this.$.result.classList.remove('ok');
+        this.$.result.classList.remove('nok');
+        if (this.question && value.length === this.question.answer.length) {
+            this._validate(this.question.answer, value);
+        }
+    }
+
+    _validate(expected, actual) {
+        if (expected.toLowerCase() == actual.toLowerCase()) {
+            this.$.result.classList.add('ok');
+            this._playsound('correct', e => location.href = '/nexthint/' + this.questionId);
+        } else {
+            this.$.result.classList.add('nok');
+            this._playsound('incorrect', e => {
+                this.$.solutioninput.value = '';
+                this.$.result.classList.remove('nok');
+            });
+        }
+    }
 }
 
 window.customElements.define('solution-view', SolutionView);

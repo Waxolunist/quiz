@@ -15,6 +15,15 @@
             "answer": "87",
             "nexthint": "kitchenaid.png",
             "link": "https://www.logisch-gedacht.de/zahlenraetsel/fehlender-schluessel/"
+        },
+
+        {
+            "id": 3,
+            "title": "Worträtsel",
+            "template": "question-03",
+            "answer": "Schere",
+            "nexthint": "kitchenaid.png",
+            "link": "https://www.janko.at/Raetsel/Gedichte/0338.htm"
         }
     ]
 }
