@@ -91,7 +91,7 @@ class MyApp extends PolymerElement {
 
           <iron-pages selected="[[page]]" attr-for-selected="name" role="main">
             <scanner-view name="scanner"></scanner-view>
-            <my-view2 name="view2"></my-view2>
+            <solution-view name="solution" question-id="[[subrouteData.id]]"></solution-view>
             <question-view name="question" question-id="[[subrouteData.id]]"></question-view>
             <my-view404 name="view404"></my-view404>
           </iron-pages>
@@ -146,7 +146,7 @@ class MyApp extends PolymerElement {
         // Show 'view1' in that case. And if the page doesn't exist, show 'view404'.
         if (!page) {
             this.page = 'scanner';
-        } else if (['scanner', 'view2', 'question'].indexOf(page) !== -1) {
+        } else if (['scanner', 'question', 'solution'].indexOf(page) !== -1) {
             this.page = page;
         } else {
             this.page = 'view404';
@@ -162,8 +162,8 @@ class MyApp extends PolymerElement {
             case 'scanner':
                 import ('./scanner.js');
                 break;
-            case 'view2':
-                import ('./my-view2.js');
+            case 'solution':
+                import ('./solution.js');
                 break;
             case 'question':
                 import ('./question.js');

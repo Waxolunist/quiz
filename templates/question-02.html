@@ -1,19 +1,37 @@
 <style>
-    .keyboard {}
-    
+    .question-image {
+        width: 100%;
+        font-size: 20pt;
+        display: flex;
+        justify-content: space-around;
+    }
+
     .key {
         background-image: url('/images/key.png');
+        background-position-x: -31px;
+        background-position-y: 0px;
+        background-size: 120px;
+        background-repeat: no-repeat;
+        min-width: 60px;
+        max-width: 60px;
+        width: 60px;
+        height: 135px;
+        text-align: center;
+        line-height: 78px;
     }
 </style>
 
 <p>
-    An einem Schlüsselbrett hängen eigentlich sechs Schlüssel nebeneinander. Der fünfte Schlüssel fehlt im Moment allerdings. Welche Nummer hat dieser wohl?
+    An einem Schlüsselbrett hängen eigentlich sechs Schlüssel nebeneinander. Der fünfte Schlüssel fehlt im Moment
+    allerdings. Welche Nummer hat dieser wohl?
 </p>
-<div class="keyboard">
-    <span class="key">I6</span>
-    <span class="key">06</span>
-    <span class="key">68</span>
-    <span class="key">88</span>
-    <span class="key"></span>
-    <span class="key">98</span>
+<div class="question-image-wrapper">
+    <div class="question-image">
+        <div class="key">I6</div>
+        <div class="key">06</div>
+        <div class="key">68</div>
+        <div class="key">88</div>
+        <div class="key"></div>
+        <div class="key">98</div>
+    </div>
 </div>

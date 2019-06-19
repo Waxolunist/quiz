@@ -38,7 +38,13 @@ $_documentContainer.innerHTML = `<iron-iconset-svg name="my-icons" size="24">
         <path d="M14,25 h4 m2,0 h2 m2, 0 h4" />
         <path d="M14,27 h2 m6,0 h2 m4,0 h2" />
         <path d="M16,29 h8 m2,0 h2"/>
-      </g>    
+      </g>
+      <g id="done">
+        <path fill="none" d="M0 0h24v24H0z"/><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+      </g> 
+      <g id="close">
+        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/><path d="M0 0h24v24H0z" fill="none"/>
+      </g>
     </defs>
   </svg>
 </iron-iconset-svg>`;

@@ -24,8 +24,27 @@ class QuestionView extends PolymerElement {
             background-color: var(--google-green-100);
             flex-grow: 0 !important;
           };
-
         }
+        
+        .question {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .question > p {
+          flex-grow: 0;
+        }
+
+        .question > * {
+          flex-grow: 1;
+        }
+
+        .question .question-image-wrapper {
+          justify-content: center;
+          align-items: center;
+          display: flex;
+        }
+
       </style>
 
       <div class="card">
@@ -34,7 +53,7 @@ class QuestionView extends PolymerElement {
           <h1>[[question.title]]</h1>
         </div>
         <div class="question" inner-h-t-m-l="[[questionTemplate]]"></div>
-        <paper-button raised="">Lösung</paper-button>
+        <paper-button raised="" on-tap="_onSolution">Lösung</paper-button>
       </div>
     `;
     }
@@ -56,6 +75,11 @@ class QuestionView extends PolymerElement {
             this.question = JSON.parse(qObj);
             this.questionTemplate = localStorage.getItem('template-' + this.question.template);
         }
+        return q;
+    }
+
+    _onSolution(event) {
+        event.target.addEventListener('transitionend', e => location.href = '/solution/' + this.questionId);
     }
 }
 

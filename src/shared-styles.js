@@ -28,7 +28,8 @@ $_documentContainer.innerHTML = `<dom-module id="shared-styles">
         overflow-x: auto;
       }
 
-      .card > h1 {
+      .card > h1,
+      .card > .header {
         flex-grow: 0;
       }
 
