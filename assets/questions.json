@@ -4,6 +4,7 @@
             "title": "Zahlenreihe",
             "template": "question-01",
             "answer": "6",
+            "nexthint": "kitchenaid.png",
             "link": "https://www.logisch-gedacht.de/knobeleien/zahlenreihe/"
         },
 
@@ -12,6 +13,7 @@
             "title": "Der fehlende Schlüssel",
             "template": "question-02",
             "answer": "87",
+            "nexthint": "kitchenaid.png",
             "link": "https://www.logisch-gedacht.de/zahlenraetsel/fehlender-schluessel/"
         }
     ]

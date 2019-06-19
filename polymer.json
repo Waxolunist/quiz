@@ -2,13 +2,17 @@
   "entrypoint": "index.html",
   "shell": "src/my-app.js",
   "sources": [
-    "images/**/*"
+    "images/**/*",
+    "assets/**/*"
   ],
   "extraDependencies": [
     "manifest.json",
     "node_modules/@webcomponents/webcomponentsjs/*.js",
     "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
-    "node_modules/@webcomponents/webcomponentsjs/bundles/*.js"
+    "node_modules/@webcomponents/webcomponentsjs/bundles/*.js",
+    "node_modules/howler/dist/howler.min.js",
+    "node_modules/qr-scanner/*.min.js"
+
   ],
   "builds": [
     {

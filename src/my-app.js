@@ -49,6 +49,10 @@ class MyApp extends PolymerElement {
           background-color: var(--app-primary-color);
         }
 
+        app-toolbar {
+          padding-left: 0;
+        }
+
         iron-pages {
           overflow: hidden;
         }
@@ -68,6 +72,11 @@ class MyApp extends PolymerElement {
           width: 96px;
           height: 96px;
         }
+
+        .appicon {
+          height: 64px;
+          padding-right: 16px;
+        }
       </style>
 
       <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
@@ -84,6 +93,7 @@ class MyApp extends PolymerElement {
 
           <app-header slot="header" fixed="" condenses=""  effects="waterfall">
             <app-toolbar>
+              <img class="appicon" src="/images/Answer_to_Life_42.svg"/>
               <div main-title="">Geburtstagsrätsel</div>
               <a href="[[rootPath]]" class="qrscanner-link"><iron-icon icon="my-icons:qrscanner"></iron-icon></a>
             </app-toolbar>
@@ -93,6 +103,7 @@ class MyApp extends PolymerElement {
             <scanner-view name="scanner"></scanner-view>
             <solution-view name="solution" question-id="[[subrouteData.id]]"></solution-view>
             <question-view name="question" question-id="[[subrouteData.id]]"></question-view>
+            <nexthint-view name="nexthint" question-id="[[subrouteData.id]]"></nexthint-view>
             <my-view404 name="view404"></my-view404>
           </iron-pages>
         </app-header-layout>
@@ -146,7 +157,7 @@ class MyApp extends PolymerElement {
         // Show 'view1' in that case. And if the page doesn't exist, show 'view404'.
         if (!page) {
             this.page = 'scanner';
-        } else if (['scanner', 'question', 'solution'].indexOf(page) !== -1) {
+        } else if (['scanner', 'question', 'solution', 'nexthint'].indexOf(page) !== -1) {
             this.page = page;
         } else {
             this.page = 'view404';
@@ -167,6 +178,9 @@ class MyApp extends PolymerElement {
                 break;
             case 'question':
                 import ('./question.js');
+                break;
+            case 'nexthint': 
+                import ('./nexthint.js');
                 break;
             case 'view404':
                 import ('./my-view404.js');

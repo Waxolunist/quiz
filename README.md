@@ -84,3 +84,14 @@ Read More here [daffl/launchpad](https://github.com/daffl/launchpad#environment-
 ---
 
 Looking for our older PSK2 Polycast or migration blog post? See [the previous README](https://github.com/Polymer/polymer-starter-kit/blob/v3.2.1/README.md).
+
+
+# Assets
+
+## Sounds
+
+https://www.audioblocks.com/royalty-free-audio/game+showl
+
+## QR Codes
+
+https://www.qrcode-generator.de/

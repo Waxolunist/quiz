@@ -226,16 +226,18 @@ class SolutionView extends PolymerElement {
   _validate(expected, actual) {
     if(expected == actual) {
       this.$.result.classList.add('ok');
-      var audio = new Audio('ok.mp3');
-      audio.play();
+      this._playsound('correct', e => location.href = '/nexthint/' + this.questionId);
     } else {
       this.$.result.classList.add('nok');
     }
   }
 
-  _playsound(name) {
-    var audio = new Audio('/assets/' + name + '.mp3');
-    audio.play();
+  _playsound(name, cb) {
+    var sound = new Howl({
+      src: ['/assets/sounds/' + name + '.mp3']
+    })
+    sound.on('end', event => setTimeout(e => cb(event), 1500));
+    sound.play();
   }
 }
 

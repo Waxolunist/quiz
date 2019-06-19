@@ -11,7 +11,11 @@
 module.exports = {
   staticFileGlobs: [
     'src/**/*',
-    'manifest.json'
+    'assets/**/*',
+    'images/**/*',
+    'manifest.json',
+    'node_modules/howler/**/*',
+    'node_modules/qr-scanner/**/*'
   ],
   runtimeCaching: [
     {
