@@ -2,6 +2,8 @@ const { src, dest, series } = require('gulp');
 const htmltojson = require('gulp-html-to-json');
 const mergeStream = require('merge-stream');
 const clean = require('gulp-clean');
+const ghPages = require('gulp-gh-pages');
+
 
 function cleanBuild(cb) {
     return src('build/', { read: false })
@@ -55,4 +57,9 @@ async function serviceworkers(cb) {
     });
 }
 
-exports.default = series(cleanBuild, htmlToJson, polymer); //, serviceworkers);
+function ghPagesTask(cb) {
+    return src('./build/**/*')
+        .pipe(ghPages());
+}
+
+exports.default = series(cleanBuild, htmlToJson, polymer, ghPagesTask); //, serviceworkers);
