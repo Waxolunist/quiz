@@ -70,7 +70,7 @@ class QuestionView extends QuestionViewElement {
     }
 
     _onSolution(event) {
-        event.target.addEventListener('transitionend', e => location.href = '/solution/' + this.questionId);
+        event.target.addEventListener('transitionend', e => this._changePath('/solution/' + this.questionId));
     }
 }
 

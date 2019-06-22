@@ -150,6 +150,20 @@ class MyApp extends PolymerElement {
             });
     }
 
+    connectedCallback() {
+        super.connectedCallback();
+        this.addEventListener('viewchange', this._routeChange);
+    }
+
+    disconnectedCallback() {
+        super.disconnectedCallback();
+        window.removeEventListener('viewchange', this._routeChange);
+    }
+
+    _routeChange(e) {
+        this.set('route.path', e.detail.path);
+    }
+
     _routePageChanged(page) {
         // Show the corresponding page according to the route.
         //
@@ -179,7 +193,7 @@ class MyApp extends PolymerElement {
             case 'question':
                 import ('./question.js');
                 break;
-            case 'nexthint': 
+            case 'nexthint':
                 import ('./nexthint.js');
                 break;
             case 'view404':

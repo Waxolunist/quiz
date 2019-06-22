@@ -1,3 +1,4 @@
+;
 /**
  * @license
  * Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
@@ -215,16 +216,26 @@ class SolutionView extends QuestionViewElement {
     }
 
     _validate(expected, actual) {
+        this.$.solutioninput.disabled = true;
         if (expected.toLowerCase() == actual.toLowerCase()) {
             this.$.result.classList.add('ok');
-            this._playsound('correct', e => location.href = '/nexthint/' + this.questionId);
+            this._playsound('correct', e => {
+                this._resetInput();
+                this._changePath('/nexthint/' + this.questionId);
+            });
         } else {
             this.$.result.classList.add('nok');
             this._playsound('incorrect', e => {
-                this.$.solutioninput.value = '';
-                this.$.result.classList.remove('nok');
+                this._resetInput();
+                setTimeout(e => this.$.solutioninput.focus(), 0);
             });
         }
+    }
+
+    _resetInput() {
+        this.$.solutioninput.value = '';
+        this.$.result.classList.remove('nok');
+        this.$.solutioninput.disabled = false;
     }
 }
 

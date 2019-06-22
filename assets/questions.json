@@ -24,6 +24,34 @@
             "answer": "Schere",
             "nexthint": "kitchenaid.png",
             "link": "https://www.janko.at/Raetsel/Gedichte/0338.htm"
+        },
+
+        {
+            "id": 4,
+            "title": "Züge",
+            "template": "question-04",
+            "answer": "46",
+            "nexthint": "kitchenaid.png",
+            "link": "https://www.merkur.de/leben/karriere/raetselseite-sti883332/zug-raetsel-zweitklaessler-laesst-eltern-verzweifeln-zr-10220325.html"
+        },
+
+        {
+            "id": 5,
+            "title": "Züge",
+            "template": "question-05",
+            "answer": "46",
+            "nexthint": "kitchenaid.png",
+            "link": "https://www.merkur.de/leben/karriere/loesung-raetsel-eisschlange-lautet-richtige-reihenfolge-zr-10247605.html"
+        },
+
+        {
+            "id": 6,
+            "title": "Züge",
+            "template": "question-06",
+            "answer": "46",
+            "nexthint": "kitchenaid.png",
+            "link": "https://www.andinet.de/raetsel/knobelaufgaben/wer_hat_das_stueck_kuchen_gegessen.html"
         }
+
     ]
 }

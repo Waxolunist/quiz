@@ -8,7 +8,7 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
-import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
 
 class QuestionViewElement extends PolymerElement {
 
@@ -38,9 +38,19 @@ class QuestionViewElement extends PolymerElement {
             src: ['/assets/sounds/' + name + '.mp3']
         });
         if (cb) {
-            sound.on('end', event => setTimeout(e => cb(event), 1500));
+            sound.on('end', event => setTimeout(e => cb(event), 100));
         }
         sound.play();
+    }
+
+    _changePath(newpath) {
+        this.dispatchEvent(new CustomEvent('viewchange', {
+            detail: {
+                path: newpath
+            },
+            bubbles: true,
+            composed: true
+        }));
     }
 }
 

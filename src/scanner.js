@@ -39,15 +39,26 @@ class ScannerView extends QuestionViewElement {
         super.ready();
         const videoElem = this.shadowRoot.getElementById('qrscanner');
         QrScanner.WORKER_PATH = '../node_modules/qr-scanner/qr-scanner-worker.min.js';
-        this._qrScanner = new QrScanner(videoElem, result => console.log('decoded qr code:', result));
-        this._qrScanner.start();
-
-        this._playsound('correct');
+        setTimeout(e => this._playsound('gameshow'), 0);
+        setTimeout(e => {
+            this._qrScanner = new QrScanner(videoElem, result => this._onScanInput(result));
+            this._qrScanner.start();
+        }, 100);
     }
 
     detached() {
         this._qrScanner.destroy();
         this._qrScanner = null;
+    }
+
+    _onScanInput(result) {
+        console.log('decoded qr code:', result)
+        if (result) {
+            let split = result.split('-');
+            if (split.length === 2 && split[0] === 'q' && Number.isInteger(parseInt(split[1]))) {
+                this._playsound('ding', e => this._changePath('/question/' + split[1]));
+            }
+        }
     }
 }
 
