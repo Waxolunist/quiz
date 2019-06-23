@@ -11,7 +11,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <meta name="generator" content="Polymer Starter Kit">
     <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
 
-    <title>My App</title>
+    <title>Geburtstagsquiz</title>
     <meta name="description" content="My App description">
 
     <!--
@@ -68,7 +68,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
          * and trailing slashes (e.g., `/my-app/`).
          */
         window.MyAppGlobals = {
-            rootPath: '/quiz/'
+            rootPath: new URL(document.querySelector('base').href).pathname
         };
 
         // Load and register pre-caching Service Worker
@@ -78,6 +78,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                     scope: MyAppGlobals.rootPath
                 });
             });
+        }
+
+        String.prototype.interpolate = function(params) {
+            const names = Object.keys(params);
+            const vals = Object.values(params);
+            return new Function(...names, `return \`${this}\`;`)(...vals);
         }
     </script>
     <!-- Load howler -->

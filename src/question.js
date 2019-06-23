@@ -444,11 +444,14 @@ class QuestionView extends QuestionViewElement {
   }
 
   _onQuestionLoaded(question) {
-    this.questionTemplate = localStorage.getItem('template-' + question.template);
+    let rawTemplate = localStorage.getItem('template-' + question.template);
+    this.questionTemplate = rawTemplate.interpolate({
+      rootPath: this.rootPath
+    });
   }
 
   _onSolution(event) {
-    event.target.addEventListener('transitionend', e => this._changePath('/solution/' + this.questionId));
+    event.target.addEventListener('transitionend', e => this._changePath('solution/' + this.questionId));
   }
 
 }

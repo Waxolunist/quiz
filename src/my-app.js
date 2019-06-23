@@ -21818,7 +21818,7 @@ class MyApp extends PolymerElement {
   }
 
   _routeChange(e) {
-    this.set('route.path', e.detail.path);
+    this.set('route.path', this.rootPath + e.detail.path);
   }
 
   _routePageChanged(page) {
