@@ -21790,6 +21790,7 @@ class MyApp extends PolymerElement {
 
   ready() {
     super.ready();
+    new URL(document.querySelector('base').href).pathname;
     fetch('./assets/questions.json').then(function (response) {
       return response.json();
     }).then(function (response) {
