@@ -21755,7 +21755,7 @@ class MyApp extends PolymerElement {
 
           <app-header slot="header" fixed="" condenses=""  effects="waterfall">
             <app-toolbar>
-              <img class="appicon" src="/images/Answer_to_Life_42.svg"/>
+              <img class="appicon" src="[[rootPath]]images/Answer_to_Life_42.svg"/>
               <div main-title="">Geburtstagsrätsel</div>
               <a href="[[rootPath]]" class="qrscanner-link"><iron-icon icon="my-icons:qrscanner"></iron-icon></a>
             </app-toolbar>
