@@ -27,6 +27,7 @@ function polymer(cb) {
 
     return mergeStream(project.sources(), project.dependencies())
         .pipe(project.bundler())
+        .pipe(project.updateBaseTag('/quiz/'))
         .pipe(project.addPushManifest())
         .pipe(dest('build/'));
 }

@@ -1,11 +1,13 @@
 {
     "entrypoint": "index.html",
     "shell": "src/my-app.js",
+    "basePath": "/quiz",
     "sources": [
         "images/**/*",
         "assets/**/*",
         "node_modules/qr-scanner/qr-scanner-worker.min.js",
-        "node_modules/qr-scanner/src/*.js"
+        "node_modules/qr-scanner/src/*.js",
+        ".nojekyll"
     ],
     "extraDependencies": [
         "manifest.json",
