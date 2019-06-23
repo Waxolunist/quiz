@@ -25,6 +25,7 @@ class NextHintView extends QuestionViewElement {
         .hint {
           display: flex;
           flex-direction: column;
+          overflow-y: hidden;
         }
 
         .hint > * {

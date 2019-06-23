@@ -221,7 +221,7 @@ class SolutionView extends QuestionViewElement {
             this.$.result.classList.add('ok');
             this._playsound('correct', e => {
                 this._resetInput();
-                this._changePath('/nexthint/' + this.questionId);
+                this._changePath('nexthint/' + this.questionId);
             });
         } else {
             this.$.result.classList.add('nok');
@@ -235,7 +235,9 @@ class SolutionView extends QuestionViewElement {
     _resetInput() {
         this.$.solutioninput.value = '';
         this.$.result.classList.remove('nok');
+        this.$.result.classList.remove('ok');
         this.$.solutioninput.disabled = false;
+        this.$.solutioninput.focus()
     }
 }
 

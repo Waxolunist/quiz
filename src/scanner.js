@@ -56,7 +56,7 @@ class ScannerView extends QuestionViewElement {
         if (result) {
             let split = result.split('-');
             if (split.length === 2 && split[0] === 'q' && Number.isInteger(parseInt(split[1]))) {
-                this._playsound('ding', e => this._changePath('/question/' + split[1]));
+                this._playsound('ding', e => this._changePath('question/' + split[1]));
             }
         }
     }

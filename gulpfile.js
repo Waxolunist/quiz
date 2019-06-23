@@ -1,4 +1,5 @@
 const { src, dest, series } = require('gulp');
+const del = require('del');
 const htmltojson = require('gulp-html-to-json');
 const mergeStream = require('merge-stream');
 const clean = require('gulp-clean');
@@ -6,8 +7,7 @@ const ghPages = require('gulp-gh-pages');
 
 
 function cleanBuild(cb) {
-    return src('build/', { read: false })
-        .pipe(clean({ force: true }));
+    return del('build/');
 }
 
 function htmlToJson(cb) {
@@ -32,7 +32,7 @@ function polymer(cb) {
         .pipe(dest('build/'));
 }
 
-async function serviceworkers(cb) {
+function serviceworkers(cb) {
     const PolymerProject = require('polymer-build').PolymerProject;
     const generateServiceWorker = require('polymer-build').generateServiceWorker;
     const addServiceWorker = require('polymer-build').addServiceWorker;
@@ -47,14 +47,6 @@ async function serviceworkers(cb) {
             // See https://github.com/GoogleChrome/sw-precache#options-parameter for all supported options
             navigateFallback: '/index.html',
         }
-    }).then(() => {
-        console.log('here');
-        addServiceWorker({
-            buildRoot: 'build/',
-            project: project,
-        }).then(() => {
-            cb();
-        })
     });
 }
 
@@ -63,4 +55,7 @@ function ghPagesTask(cb) {
         .pipe(ghPages());
 }
 
-exports.default = series(cleanBuild, htmlToJson, polymer, ghPagesTask); //, serviceworkers);
+exports.assets = htmlToJson;
+exports.build = series(cleanBuild, htmlToJson, polymer); //, serviceworkers);
+exports.deploy = series(exports.build, ghPagesTask);
+exports.default = exports.build;

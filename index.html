@@ -84,6 +84,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
                 });
             });
         }
+
+        String.prototype.interpolate = function(params) {
+            const names = Object.keys(params);
+            const vals = Object.values(params);
+            return new Function(...names, `return \`${this}\`;`)(...vals);
+        }
     </script>
     <!-- Load howler -->
     <script src="node_modules/howler/dist/howler.min.js"></script>
