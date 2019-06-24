@@ -51,7 +51,7 @@ function serviceworkers(cb) {
 }
 
 function ghPagesTask(cb) {
-    return src('./build/**/*')
+    return src(['./build/**/*', './build/.nojekyll'])
         .pipe(ghPages());
 }
 

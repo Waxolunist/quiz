@@ -35,7 +35,7 @@ class QuestionViewElement extends PolymerElement {
 
     _playsound(name, cb) {
         var sound = new Howl({
-            src: ['/assets/sounds/' + name + '.mp3']
+            src: [`${this.rootPath}assets/sounds/${name}.mp3`]
         });
         if (cb) {
             sound.on('end', event => setTimeout(e => cb(event), 100));
