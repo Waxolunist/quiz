@@ -1,23 +1,16 @@
-;
-/**
- * @license
- * Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
- */
-
-import { html } from '@polymer/polymer/polymer-element.js';
-import { QuestionViewElement } from './view-element';
+import {
+  html
+} from '@polymer/polymer/polymer-element.js';
+import {
+  QuestionViewElement
+} from './view-element';
 import './shared-styles.js';
 import '@polymer/iron-icon/iron-icon.js';
 import './my-icons.js';
 
 class SolutionView extends QuestionViewElement {
-    static get template() {
-        return html `
+  static get template() {
+    return html `
       <style include="shared-styles">
         :host {
           display: block;
@@ -134,7 +127,7 @@ class SolutionView extends QuestionViewElement {
 
       <div class="card">
         <div class="header">
-          <a href="[[rootPath]]question/[[question.id]]" class="back-link"><iron-icon icon="my-icons:arrow-back"></iron-icon></a>
+          <a href="[[rootPath]]#/question/[[question.id]]" class="back-link"><iron-icon icon="my-icons:arrow-back"></iron-icon></a>
           <div class="circle">[[question.id]]</div>
         </div>
         <div class="input-wrapper">
@@ -154,91 +147,107 @@ class SolutionView extends QuestionViewElement {
         </div>
       </div>
     `;
+  }
+
+  static get properties() {
+    return {
+      _styleSheet: Object
+    };
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this._prepareDynamicStyleSheet();
+    this._configureInputField();
+  }
+
+  _onQuestionLoaded(question) {
+    this._prepareDynamicStyleSheet();
+    this._configureInputField();
+  }
+
+  _onViewActivated() {
+    this._focusInput();
+  }
+
+  _prepareDynamicStyleSheet() {
+    if (!this._styleSheet) {
+      var styleEl = document.createElement('style');
+      this.shadowRoot.appendChild(styleEl);
+      this._styleSheet = styleEl.sheet;
     }
+  }
 
-    static get properties() {
-        return {
-            _styleSheet: Object
-        };
+  _configureInputField() {
+    if (this.question) {
+      let length = this.question.answer.length;
+      this.$.solutioninput.minLength = 0;
+      this.$.solutioninput.maxLength = length;
+      this.$.solutioninput.minLength = length;
+      this.$.solutioninput.size = length;
+
+      if (Number.isInteger(parseInt(this.question.answer))) {
+        this.$.solutioninput.inputMode = "number";
+      }
+
+      this._injectStyles(this._createContentRule(length));
+
+      this._focusInput();
     }
+  }
 
-    connectedCallback() {
-        super.connectedCallback();
-        this._prepareDynamicStyleSheet();
-        this._configureInputField();
+  _createContentRule(length) {
+    let contentString = Array(length + 1).join('___ ').trim();
+    return `.input-wrapper fieldset::after { content: "${contentString}"; }`;
+  }
+
+  _injectStyles(rule) {
+    if (this._styleSheet) {
+      while(this._styleSheet.rules.length > 0) {
+        this._styleSheet.removeRule(this._styleSheet.rules[0]);
+      }
+      this._styleSheet.insertRule(rule, 0);
     }
+  }
 
-    _onQuestionLoaded(question) {
-        this._configureInputField();
+  _inputchanged() {
+    let value = this.$.solutioninput.value;
+    this.$.result.classList.remove('ok');
+    this.$.result.classList.remove('nok');
+    if (this.question && value.length === this.question.answer.length) {
+      this._validate(this.question.answer, value);
     }
+  }
 
-    _prepareDynamicStyleSheet() {
-        if (!this._styleSheet) {
-            var styleEl = document.createElement('style');
-            this.shadowRoot.appendChild(styleEl);
-            this._styleSheet = styleEl.sheet;
-        }
+  _validate(expected, actual) {
+    this.$.solutioninput.disabled = true;
+    if (expected.toLowerCase() == actual.toLowerCase()) {
+      this.$.result.classList.add('ok');
+      this._playsound('correct', e => {
+        this._resetInput(false);
+        this._changePath('nexthint/' + this.questionId);
+      });
+    } else {
+      this.$.result.classList.add('nok');
+      this._playsound('incorrect', e => {
+        this._resetInput(true);
+      });
     }
+  }
 
-    _configureInputField() {
-        if (this.question) {
-            let length = this.question.answer.length;
-            this.$.solutioninput.minLength = length;
-            this.$.solutioninput.maxLength = length;
-            this.$.solutioninput.size = length;
+  _focusInput() {
+    setTimeout(e => this.$.solutioninput.focus(), 0);
+  }
 
-            if (Number.isInteger(parseInt(this.question.answer))) {
-                this.$.solutioninput.inputMode = "number";
-            }
-
-            this._injectStyles(this._createContentRule(length));
-        }
+  _resetInput(focus) {
+    this.$.solutioninput.value = '';
+    this.$.result.classList.remove('nok');
+    this.$.result.classList.remove('ok');
+    this.$.solutioninput.disabled = false;
+    if(focus) {
+      this._focusInput();
     }
-
-    _createContentRule(length) {
-        let contentString = Array(length + 1).join('___ ').trim();
-        return `.input-wrapper fieldset::after { content: "${contentString}"; }`;
-    }
-
-    _injectStyles(rule) {
-        if (this._styleSheet) {
-            this._styleSheet.insertRule(rule, 0);
-        }
-    }
-
-    _inputchanged() {
-        let value = this.$.solutioninput.value;
-        this.$.result.classList.remove('ok');
-        this.$.result.classList.remove('nok');
-        if (this.question && value.length === this.question.answer.length) {
-            this._validate(this.question.answer, value);
-        }
-    }
-
-    _validate(expected, actual) {
-        this.$.solutioninput.disabled = true;
-        if (expected.toLowerCase() == actual.toLowerCase()) {
-            this.$.result.classList.add('ok');
-            this._playsound('correct', e => {
-                this._resetInput();
-                this._changePath('nexthint/' + this.questionId);
-            });
-        } else {
-            this.$.result.classList.add('nok');
-            this._playsound('incorrect', e => {
-                this._resetInput();
-                setTimeout(e => this.$.solutioninput.focus(), 0);
-            });
-        }
-    }
-
-    _resetInput() {
-        this.$.solutioninput.value = '';
-        this.$.result.classList.remove('nok');
-        this.$.result.classList.remove('ok');
-        this.$.solutioninput.disabled = false;
-        this.$.solutioninput.focus()
-    }
+  }
 }
 
 window.customElements.define('solution-view', SolutionView);

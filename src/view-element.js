@@ -16,9 +16,13 @@ class QuestionViewElement extends PolymerElement {
         return {
             questionId: {
                 type: String,
-                observer: '_questionChanged',
+                observer: '_questionChanged'
             },
-            question: Object
+            question: Object,
+            active: {
+                type: Boolean,
+                observer: '_viewActivated'
+            }
         };
     }
 
@@ -51,6 +55,12 @@ class QuestionViewElement extends PolymerElement {
             bubbles: true,
             composed: true
         }));
+    }
+
+    _viewActivated(active) {
+        if (this._onViewActivated) {
+            this._onViewActivated();
+        }
     }
 }
 
