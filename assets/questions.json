@@ -37,20 +37,29 @@
 
         {
             "id": 5,
-            "title": "Züge",
+            "title": "Eis",
             "template": "question-05",
-            "answer": "46",
+            "answer": "Lena",
             "nexthint": "kitchenaid.png",
             "link": "https://www.merkur.de/leben/karriere/loesung-raetsel-eisschlange-lautet-richtige-reihenfolge-zr-10247605.html"
         },
 
         {
             "id": 6,
-            "title": "Züge",
+            "title": "Kuchen",
             "template": "question-06",
-            "answer": "46",
+            "answer": "Anna",
             "nexthint": "kitchenaid.png",
             "link": "https://www.andinet.de/raetsel/knobelaufgaben/wer_hat_das_stueck_kuchen_gegessen.html"
+        },
+
+        {
+            "id": 7,
+            "title": "Worträtsel",
+            "template": "question-07",
+            "answer": "Zeit",
+            "nexthint": "kitchenaid.png",
+            "link": "https://www.janko.at/Raetsel/Gedichte/0586.htm"
         }
 
     ]

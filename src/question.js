@@ -46,6 +46,20 @@ class QuestionView extends QuestionViewElement {
           display: flex;
         }
 
+        .question .question-image {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+          align-items: center;
+        }
+
+        .poem {
+          text-align: center;
+          margin-top: 60px;
+          font-size: 15pt;
+        }
       </style>
 
       <div class="card">
