@@ -21741,10 +21741,10 @@ class MyApp extends PolymerElement {
         }
       </style>
 
-      <app-location route="{{route}}" url-space-regex="^[[rootPath]]" use-hash-as-path>
+      <app-location route="{{route}}" url-space-regex="^/" use-hash-as-path="true">
       </app-location>
 
-      <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
+      <app-route route="{{route}}" pattern="/:page" data="{{routeData}}" tail="{{subroute}}">
       </app-route>
       <app-route route="{{subroute}}" pattern="/:id" data="{{subrouteData}}">
       </app-route>
@@ -21757,7 +21757,7 @@ class MyApp extends PolymerElement {
             <app-toolbar>
               <img class="appicon" src="[[rootPath]]images/Answer_to_Life_42.svg"/>
               <div main-title="">Geburtstagsrätsel</div>
-              <a href="[[rootPath]]" class="qrscanner-link"><iron-icon icon="my-icons:qrscanner"></iron-icon></a>
+              <a href="#/" class="qrscanner-link"><iron-icon icon="my-icons:qrscanner"></iron-icon></a>
             </app-toolbar>
           </app-header>
 
@@ -21818,7 +21818,8 @@ class MyApp extends PolymerElement {
   }
 
   _routeChange(e) {
-    this.set('route.path', this.rootPath + e.detail.path);
+    //this.set('route.path', this.rootPath + e.detail.path);
+    this.set('route.path', '/' + e.detail.path);
   }
 
   _routePageChanged(page) {
