@@ -134,7 +134,7 @@ class SolutionView extends QuestionViewElement {
 
       <div class="card">
         <div class="header">
-          <a href="/question/[[question.id]]" class="back-link"><iron-icon icon="my-icons:arrow-back"></iron-icon></a>
+          <a href="[[rootPath]]question/[[question.id]]" class="back-link"><iron-icon icon="my-icons:arrow-back"></iron-icon></a>
           <div class="circle">[[question.id]]</div>
         </div>
         <div class="input-wrapper">
