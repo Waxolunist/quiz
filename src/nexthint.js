@@ -46,7 +46,7 @@ class NextHintView extends QuestionViewElement {
         <div class="hint">
           <p>Gratulation, du hast die Frage richtig beantwortet.</p>
           <p>Hier ist dein nächster Hinweis.</p>
-          <img src="/images/hints/[[question.nexthint]]"/>
+          <img src="[[rootPath]]images/hints/[[question.nexthint]]"/>
         </div>
       </div>
     `;
