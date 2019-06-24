@@ -1,13 +1,4 @@
 import { html, QuestionViewElement } from './my-app.js';
-; /**
-   * @license
-   * Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
-   * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-   * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-   * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
-   * Code distributed by Google as part of the polymer project is also
-   * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
-   */
 
 class SolutionView extends QuestionViewElement {
   static get template() {
@@ -128,7 +119,7 @@ class SolutionView extends QuestionViewElement {
 
       <div class="card">
         <div class="header">
-          <a href="[[rootPath]]question/[[question.id]]" class="back-link"><iron-icon icon="my-icons:arrow-back"></iron-icon></a>
+          <a href="[[rootPath]]#/question/[[question.id]]" class="back-link"><iron-icon icon="my-icons:arrow-back"></iron-icon></a>
           <div class="circle">[[question.id]]</div>
         </div>
         <div class="input-wrapper">
@@ -165,7 +156,13 @@ class SolutionView extends QuestionViewElement {
   }
 
   _onQuestionLoaded(question) {
+    this._prepareDynamicStyleSheet();
+
     this._configureInputField();
+  }
+
+  _onViewActivated() {
+    this._focusInput();
   }
 
   _prepareDynamicStyleSheet() {
@@ -179,8 +176,9 @@ class SolutionView extends QuestionViewElement {
   _configureInputField() {
     if (this.question) {
       let length = this.question.answer.length;
-      this.$.solutioninput.minLength = length;
+      this.$.solutioninput.minLength = 0;
       this.$.solutioninput.maxLength = length;
+      this.$.solutioninput.minLength = length;
       this.$.solutioninput.size = length;
 
       if (Number.isInteger(parseInt(this.question.answer))) {
@@ -188,6 +186,8 @@ class SolutionView extends QuestionViewElement {
       }
 
       this._injectStyles(this._createContentRule(length));
+
+      this._focusInput();
     }
   }
 
@@ -198,6 +198,10 @@ class SolutionView extends QuestionViewElement {
 
   _injectStyles(rule) {
     if (this._styleSheet) {
+      while (this._styleSheet.rules.length > 0) {
+        this._styleSheet.removeRule(this._styleSheet.rules[0]);
+      }
+
       this._styleSheet.insertRule(rule, 0);
     }
   }
@@ -219,7 +223,7 @@ class SolutionView extends QuestionViewElement {
       this.$.result.classList.add('ok');
 
       this._playsound('correct', e => {
-        this._resetInput();
+        this._resetInput(false);
 
         this._changePath('nexthint/' + this.questionId);
       });
@@ -227,19 +231,24 @@ class SolutionView extends QuestionViewElement {
       this.$.result.classList.add('nok');
 
       this._playsound('incorrect', e => {
-        this._resetInput();
-
-        setTimeout(e => this.$.solutioninput.focus(), 0);
+        this._resetInput(true);
       });
     }
   }
 
-  _resetInput() {
+  _focusInput() {
+    setTimeout(e => this.$.solutioninput.focus(), 0);
+  }
+
+  _resetInput(focus) {
     this.$.solutioninput.value = '';
     this.$.result.classList.remove('nok');
     this.$.result.classList.remove('ok');
     this.$.solutioninput.disabled = false;
-    this.$.solutioninput.focus();
+
+    if (focus) {
+      this._focusInput();
+    }
   }
 
 }

@@ -21741,7 +21741,7 @@ class MyApp extends PolymerElement {
         }
       </style>
 
-      <app-location route="{{route}}" url-space-regex="^[[rootPath]]">
+      <app-location route="{{route}}" url-space-regex="^[[rootPath]]" use-hash-as-path>
       </app-location>
 
       <app-route route="{{route}}" pattern="[[rootPath]]:page" data="{{routeData}}" tail="{{subroute}}">
@@ -21761,7 +21761,7 @@ class MyApp extends PolymerElement {
             </app-toolbar>
           </app-header>
 
-          <iron-pages selected="[[page]]" attr-for-selected="name" role="main">
+          <iron-pages selected="[[page]]" attr-for-selected="name" role="main" selected-attribute="active">
             <scanner-view name="scanner"></scanner-view>
             <solution-view name="solution" question-id="[[subrouteData.id]]"></solution-view>
             <question-view name="question" question-id="[[subrouteData.id]]"></question-view>
@@ -21928,7 +21928,11 @@ class QuestionViewElement extends PolymerElement {
         type: String,
         observer: '_questionChanged'
       },
-      question: Object
+      question: Object,
+      active: {
+        type: Boolean,
+        observer: '_viewActivated'
+      }
     };
   }
 
@@ -21966,6 +21970,12 @@ class QuestionViewElement extends PolymerElement {
       bubbles: true,
       composed: true
     }));
+  }
+
+  _viewActivated(active) {
+    if (this._onViewActivated) {
+      this._onViewActivated();
+    }
   }
 
 }
