@@ -38,7 +38,7 @@ class ScannerView extends QuestionViewElement {
     ready() {
         super.ready();
         const videoElem = this.shadowRoot.getElementById('qrscanner');
-        QrScanner.WORKER_PATH = '../node_modules/qr-scanner/qr-scanner-worker.min.js';
+        QrScanner.WORKER_PATH = `${this.rootPath}node_modules/qr-scanner/qr-scanner-worker.min.js`;
         setTimeout(e => this._playsound('gameshow'), 0);
         setTimeout(e => {
             this._qrScanner = new QrScanner(videoElem, result => this._onScanInput(result));
