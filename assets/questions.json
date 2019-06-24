@@ -60,6 +60,24 @@
             "answer": "Zeit",
             "nexthint": "kitchenaid.png",
             "link": "https://www.janko.at/Raetsel/Gedichte/0586.htm"
+        },
+
+        {
+            "id": 8,
+            "title": "Essenszeit",
+            "template": "question-08",
+            "answer": "7",
+            "nexthint": "kitchenaid.png",
+            "link": "https://www.raetselstunde.de/text-raetsel/knobelaufgaben/knobeleien-006.html"
+        },
+
+        {
+            "id": 9,
+            "title": "Uhren",
+            "template": "question-09",
+            "answer": "9",
+            "nexthint": "kitchenaid.png",
+            "link": "https://www.raetselstunde.de/text-raetsel/knobelaufgaben/knobeleien-001.html"
         }
 
     ]

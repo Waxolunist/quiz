@@ -5,3 +5,5 @@
 //=question-05 : question-05.html
 //=question-06 : question-06.html
 //=question-07 : question-07.html
+//=question-08 : question-08.html
+//=question-09 : question-09.html
