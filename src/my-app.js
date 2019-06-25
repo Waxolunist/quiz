@@ -44,7 +44,7 @@ class MyApp extends PolymerElement {
         }
 
         .base {
-          min-width: 380px;
+          min-width: 350px;
         }
 
         app-header {
