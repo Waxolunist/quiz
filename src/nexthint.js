@@ -1,12 +1,4 @@
-/**
- * @license
- * Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
- */import{html}from"../node_modules/@polymer/polymer/polymer-element.js";import"./shared-styles.js";import{QuestionViewElement}from"./view-element.js";class NextHintView extends QuestionViewElement{static get template(){return html`
+define(["./my-app.js"],function(_myApp){"use strict";class NextHintView extends _myApp.QuestionViewElement{static get template(){return _myApp.html`
       <style include="shared-styles">
         :host {
           display: block;
@@ -50,4 +42,4 @@
           </div> 
         </div>
       </div>
-    `}static get properties(){return{}}}window.customElements.define("nexthint-view",NextHintView);
+    `}static get properties(){return{}}}window.customElements.define("nexthint-view",NextHintView)});
