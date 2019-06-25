@@ -1,1 +1,45 @@
-define(["../node_modules/@polymer/polymer/polymer-element.js","./shared-styles.js","./view-element.js"],function(_polymerElement,_sharedStyles,_viewElement){"use strict";function _templateObject_f34633d0972111e99e121559d6999ace(){var data=babelHelpers.taggedTemplateLiteral(["\n      <style include=\"shared-styles\">\n        :host {\n          display: block;\n        }\n\n        .hint {\n          display: flex;\n          flex-direction: column;\n          overflow-y: hidden;\n        }\n\n        .hint > * {\n          flex-grow: 0;\n        }\n\n        .hint > .hint-image-wrapper {\n          flex-grow: 1;\n        }\n\n        .hint .hint-image {\n          width: 100%;\n          height: 100%;\n          background-repeat: no-repeat;\n          background-size: contain;\n          background-position: center;\n        }\n\n      </style>\n\n      <div class=\"card\">\n        <div class=\"header\">\n          <div class=\"circle\">[[question.id]]</div>\n          <h1>Dein n\xE4chster Hinweis</h1>\n        </div>\n        <div class=\"hint\">\n          <p>Gratulation, du hast die Frage richtig beantwortet.</p>\n          <p>Hier ist dein n\xE4chster Hinweis.</p>\n          \n          <div class=\"hint-image-wrapper\">\n            <div class=\"hint-image\" style=\"background-image: url('[[rootPath]]images/hints/[[question.nexthint]]')\"></div>\n          </div> \n        </div>\n      </div>\n    "]);_templateObject_f34633d0972111e99e121559d6999ace=function _templateObject_f34633d0972111e99e121559d6999ace(){return data};return data}var NextHintView=/*#__PURE__*/function(_QuestionViewElement){babelHelpers.inherits(NextHintView,_QuestionViewElement);function NextHintView(){babelHelpers.classCallCheck(this,NextHintView);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(NextHintView).apply(this,arguments))}babelHelpers.createClass(NextHintView,null,[{key:"template",get:function get(){return(0,_polymerElement.html)(_templateObject_f34633d0972111e99e121559d6999ace())}},{key:"properties",get:function get(){return{}}}]);return NextHintView}(_viewElement.QuestionViewElement);window.customElements.define("nexthint-view",NextHintView)});
+define(["./my-app.js"],function(_myApp){"use strict";class NextHintView extends _myApp.QuestionViewElement{static get template(){return _myApp.html`
+      <style include="shared-styles">
+        :host {
+          display: block;
+        }
+
+        .hint {
+          display: flex;
+          flex-direction: column;
+          overflow-y: hidden;
+        }
+
+        .hint > * {
+          flex-grow: 0;
+        }
+
+        .hint > .hint-image-wrapper {
+          flex-grow: 1;
+        }
+
+        .hint .hint-image {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+      </style>
+
+      <div class="card">
+        <div class="header">
+          <div class="circle">[[question.id]]</div>
+          <h1>Dein nächster Hinweis</h1>
+        </div>
+        <div class="hint">
+          <p>Gratulation, du hast die Frage richtig beantwortet.</p>
+          <p>Hier ist dein nächster Hinweis.</p>
+          
+          <div class="hint-image-wrapper">
+            <div class="hint-image" style="background-image: url('[[rootPath]]images/hints/[[question.nexthint]]')"></div>
+          </div> 
+        </div>
+      </div>
+    `}static get properties(){return{}}}window.customElements.define("nexthint-view",NextHintView)});

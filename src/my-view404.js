@@ -1,1 +1,11 @@
-define(["../node_modules/@polymer/polymer/polymer-element.js"],function(_polymerElement){"use strict";function _templateObject_f349dd50972111e99e121559d6999ace(){var data=babelHelpers.taggedTemplateLiteral(["\n      <style>\n        :host {\n          display: block;\n\n          padding: 10px 20px;\n        }\n      </style>\n\n      Oops you hit a 404. <a href=\"[[rootPath]]\">Head back to home.</a>\n    "]);_templateObject_f349dd50972111e99e121559d6999ace=function _templateObject_f349dd50972111e99e121559d6999ace(){return data};return data}var MyView404=/*#__PURE__*/function(_PolymerElement){babelHelpers.inherits(MyView404,_PolymerElement);function MyView404(){babelHelpers.classCallCheck(this,MyView404);return babelHelpers.possibleConstructorReturn(this,babelHelpers.getPrototypeOf(MyView404).apply(this,arguments))}babelHelpers.createClass(MyView404,null,[{key:"template",get:function get(){return(0,_polymerElement.html)(_templateObject_f349dd50972111e99e121559d6999ace())}}]);return MyView404}(_polymerElement.PolymerElement);window.customElements.define("my-view404",MyView404)});
+define(["./my-app.js"],function(_myApp){"use strict";class MyView404 extends _myApp.PolymerElement{static get template(){return _myApp.html`
+      <style>
+        :host {
+          display: block;
+
+          padding: 10px 20px;
+        }
+      </style>
+
+      Oops you hit a 404. <a href="[[rootPath]]">Head back to home.</a>
+    `}}window.customElements.define("my-view404",MyView404)});
