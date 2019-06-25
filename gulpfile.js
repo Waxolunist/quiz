@@ -33,8 +33,9 @@ function polymer(cb) {
 }
 
 function afterBuild(cb) {
-    let qrScannerWorker = './node_modules/qr-scanner/qr-scanner-worker.min.js';
-    return src(qrScannerWorker).pipe(dest(paths.buildname + qrScannerWorker));
+    let qrScannerWorkerDir = './node_modules/qr-scanner/';
+    let qrScannerWorkerFile = 'qr-scanner-worker.min.js';
+    return src(qrScannerWorkerDir + qrScannerWorkerFile).pipe(dest(paths.buildname + qrScannerWorkerDir));
 }
 
 function ghPagesTask(cb) {
@@ -43,6 +44,7 @@ function ghPagesTask(cb) {
 }
 
 exports.assets = htmlToJson;
+exports.afterbuild = afterBuild;
 exports.build = series(cleanBuild, htmlToJson, polymer, afterBuild);
 exports.deploy = series(exports.build, ghPagesTask);
 exports.default = exports.build;

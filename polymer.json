@@ -4,7 +4,6 @@
     "sources": [
         "images/**/*",
         "assets/**/*",
-        "node_modules/qr-scanner/src/*.js",
         ".nojekyll"
     ],
     "extraDependencies": [
@@ -12,11 +11,21 @@
         "node_modules/@webcomponents/webcomponentsjs/*.js",
         "!node_modules/@webcomponents/webcomponentsjs/gulpfile.js",
         "node_modules/@webcomponents/webcomponentsjs/bundles/*.js",
-        "node_modules/howler/dist/howler.min.js"
+        "node_modules/howler/dist/howler.min.js",
+        "node_modules/qr-scanner/src/*.js"
     ],
     "builds": [{
         "preset": "es6-bundled",
-        "basePath": "/quiz/"
+        "basePath": "/quiz/",
+        "bundle": {
+            "excludes": ["node_modules/qr-scanner/src/qr-scanner.js"]
+        },
+        "js": {
+            "minify": {
+                "exclude": ["node_modules/qr-scanner/src/qr-scanner.js"]
+            },
+            "compile": false
+        }
     }],
     "moduleResolution": "node",
     "npm": true,
