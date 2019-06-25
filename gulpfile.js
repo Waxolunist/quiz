@@ -1,13 +1,17 @@
 const { src, dest, series } = require('gulp');
 const del = require('del');
 const htmltojson = require('gulp-html-to-json');
-const mergeStream = require('merge-stream');
-const clean = require('gulp-clean');
 const ghPages = require('gulp-gh-pages');
+var exec = require('child_process').exec;
 
+const paths = {
+    build: './build/',
+    assets: './assets/',
+};
+paths.buildname = paths.build + './es6-bundled/';
 
 function cleanBuild(cb) {
-    return del('build/');
+    return del(paths.build);
 }
 
 function htmlToJson(cb) {
@@ -17,45 +21,28 @@ function htmlToJson(cb) {
             useAsVariable: false,
             isAngularTemplate: false
         }))
-        .pipe(dest('assets/.'));
+        .pipe(dest(paths.assets));
 }
 
 function polymer(cb) {
-    const PolymerProject = require('polymer-build').PolymerProject;
-
-    const project = new PolymerProject(require('./polymer.json'));
-
-    return mergeStream(project.sources(), project.dependencies())
-        .pipe(project.bundler())
-        .pipe(project.updateBaseTag('/quiz/'))
-        .pipe(project.addPushManifest())
-        .pipe(dest('build/'));
-}
-
-function serviceworkers(cb) {
-    const PolymerProject = require('polymer-build').PolymerProject;
-    const generateServiceWorker = require('polymer-build').generateServiceWorker;
-    const addServiceWorker = require('polymer-build').addServiceWorker;
-
-    const project = new PolymerProject(require('./polymer.json'));
-
-    return generateServiceWorker({
-        buildRoot: 'build/',
-        project: project,
-        bundled: true, // set if `project.bundler()` was used
-        swPrecacheConfig: {
-            // See https://github.com/GoogleChrome/sw-precache#options-parameter for all supported options
-            navigateFallback: '/index.html',
-        }
+    exec('node ./node_modules/polymer-cli/bin/polymer.js build', function(err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
     });
 }
 
+function afterBuild(cb) {
+    let qrScannerWorker = './node_modules/qr-scanner/qr-scanner-worker.min.js';
+    return src(qrScannerWorker).pipe(dest(paths.buildname + qrScannerWorker));
+}
+
 function ghPagesTask(cb) {
-    return src(['./build/**/*', './build/.nojekyll'])
+    return src([paths.buildname + '**/*', paths.buildname + '.nojekyll'])
         .pipe(ghPages());
 }
 
 exports.assets = htmlToJson;
-exports.build = series(cleanBuild, htmlToJson, polymer); //, serviceworkers);
+exports.build = series(cleanBuild, htmlToJson, polymer, afterBuild);
 exports.deploy = series(exports.build, ghPagesTask);
 exports.default = exports.build;

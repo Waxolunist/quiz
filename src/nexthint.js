@@ -32,10 +32,18 @@ class NextHintView extends QuestionViewElement {
           flex-grow: 0;
         }
 
-        .hint > img {
+        .hint > .hint-image-wrapper {
           flex-grow: 1;
-          object-fit: contain;
         }
+
+        .hint .hint-image {
+          width: 100%;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
       </style>
 
       <div class="card">
@@ -46,7 +54,10 @@ class NextHintView extends QuestionViewElement {
         <div class="hint">
           <p>Gratulation, du hast die Frage richtig beantwortet.</p>
           <p>Hier ist dein nächster Hinweis.</p>
-          <img src="[[rootPath]]images/hints/[[question.nexthint]]"/>
+          
+          <div class="hint-image-wrapper">
+            <div class="hint-image" style="background-image: url('[[rootPath]]images/hints/[[question.nexthint]]')"></div>
+          </div> 
         </div>
       </div>
     `;

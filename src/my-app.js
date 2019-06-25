@@ -17,9 +17,8 @@ import '@polymer/app-layout/app-toolbar/app-toolbar.js';
 import '@polymer/app-route/app-location.js';
 import '@polymer/app-route/app-route.js';
 import '@polymer/iron-pages/iron-pages.js';
-import '@polymer/iron-selector/iron-selector.js';
-import '@polymer/paper-icon-button/paper-icon-button.js';
 import '@polymer/iron-icon/iron-icon.js';
+import '@polymer/paper-styles/color.js'
 import './my-icons.js';
 
 // Gesture events like tap and track generated from touch will not be
@@ -42,6 +41,10 @@ class MyApp extends PolymerElement {
           position: absolute;
           top: 0; bottom: 0; left: 0; right: 0;
           overflow-x: hidden;
+        }
+
+        .base {
+          min-width: 380px;
         }
 
         app-header {
@@ -89,7 +92,7 @@ class MyApp extends PolymerElement {
  
 
         <!-- Main content -->
-        <app-header-layout has-scrolling-region="" fullbleed="">
+        <app-header-layout has-scrolling-region="" fullbleed="" class="base">
 
           <app-header slot="header" fixed="" condenses=""  effects="waterfall">
             <app-toolbar>
