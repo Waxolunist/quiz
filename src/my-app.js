@@ -8664,7 +8664,7 @@ setRootPath(MyAppGlobals.rootPath);class MyApp extends PolymerElement{static get
         }
 
         .base {
-          min-width: 380px;
+          min-width: 350px;
         }
 
         app-header {
