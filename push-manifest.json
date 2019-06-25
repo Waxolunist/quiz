@@ -1,5 +1,345 @@
 {
   "src/my-app.js": {
+    "node_modules/%40polymer/polymer/polymer-element.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/element-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/boot.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/settings.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/resolve-url.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/style-gather.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-module.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-effects.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/wrap.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/path.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/case-map.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-accessors.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-changed.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/async.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/template-stamp.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/telemetry.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/html-tag.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-header/app-header.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/polymer-legacy.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/legacy-element-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/entrypoints/apply-shim.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/apply-shim.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/style-util.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/style-settings.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/css-parse.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/common-regex.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/unscoped-style-handler.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/common-utils.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/template-map.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/apply-shim-utils.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/custom-style-interface.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/document-wait.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/gesture-event-listeners.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/gestures.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/debounce.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/dir-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/render-status.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/unresolved.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/polymer.dom.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/flattened-nodes-observer.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/array-splice.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/flush.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/polymer-fn.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/class.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/templatizer-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/templatize.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/mutable-data.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-bind.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-repeat.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-if.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/array-selector.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/custom-style.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/entrypoints/custom-style-interface.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/mutable-data-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-flex-layout/iron-flex-layout.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-layout-behavior/app-layout-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-resizable-behavior/iron-resizable-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-scroll-effects/app-scroll-effects-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-scroll-target-behavior/iron-scroll-target-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/helpers/helpers.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-header-layout/app-header-layout.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-scroll-effects/app-scroll-effects.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-scroll-effects/effects/blend-background.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-scroll-effects/effects/fade-background.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-scroll-effects/effects/material.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-scroll-effects/effects/waterfall.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-scroll-effects/effects/resize-title.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-scroll-effects/effects/parallax-background.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-scroll-effects/effects/resize-snapped-title.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-layout/app-toolbar/app-toolbar.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-route/app-location.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-location/iron-location.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-location/iron-query-params.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-route/app-route-converter-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/app-route/app-route.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-pages/iron-pages.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-selector/iron-selectable.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-selector/iron-selection.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-icon/iron-icon.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-meta/iron-meta.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/paper-styles/color.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/my-icons.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-iconset-svg/iron-iconset-svg.js": {
+      "type": "script",
+      "weight": 1
+    },
     "src/scanner.js": {
       "type": "script",
       "weight": 1
@@ -22,131 +362,775 @@
     }
   },
   "src/scanner.js": {
-    "src/my-app.js": {
+    "node_modules/%40polymer/polymer/polymer-element.js": {
       "type": "script",
       "weight": 1
     },
-    "src/scanner.js": {
+    "node_modules/%40polymer/polymer/lib/mixins/element-mixin.js": {
       "type": "script",
       "weight": 1
     },
-    "src/solution.js": {
+    "node_modules/%40polymer/polymer/lib/utils/boot.js": {
       "type": "script",
       "weight": 1
     },
-    "src/question.js": {
+    "node_modules/%40polymer/polymer/lib/utils/settings.js": {
       "type": "script",
       "weight": 1
     },
-    "src/nexthint.js": {
+    "node_modules/%40polymer/polymer/lib/utils/resolve-url.js": {
       "type": "script",
       "weight": 1
     },
-    "src/my-view404.js": {
+    "node_modules/%40polymer/polymer/lib/utils/mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/style-gather.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-module.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-effects.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/wrap.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/path.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/case-map.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-accessors.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-changed.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/async.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/template-stamp.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/telemetry.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/html-tag.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/shared-styles.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/view-element.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/qr-scanner/src/qr-scanner.js": {
       "type": "script",
       "weight": 1
     }
   },
   "src/solution.js": {
-    "src/my-app.js": {
+    "node_modules/%40polymer/polymer/polymer-element.js": {
       "type": "script",
       "weight": 1
     },
-    "src/scanner.js": {
+    "node_modules/%40polymer/polymer/lib/mixins/element-mixin.js": {
       "type": "script",
       "weight": 1
     },
-    "src/solution.js": {
+    "node_modules/%40polymer/polymer/lib/utils/boot.js": {
       "type": "script",
       "weight": 1
     },
-    "src/question.js": {
+    "node_modules/%40polymer/polymer/lib/utils/settings.js": {
       "type": "script",
       "weight": 1
     },
-    "src/nexthint.js": {
+    "node_modules/%40polymer/polymer/lib/utils/resolve-url.js": {
       "type": "script",
       "weight": 1
     },
-    "src/my-view404.js": {
+    "node_modules/%40polymer/polymer/lib/utils/mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/style-gather.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-module.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-effects.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/wrap.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/path.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/case-map.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-accessors.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-changed.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/async.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/template-stamp.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/telemetry.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/html-tag.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/view-element.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/shared-styles.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-icon/iron-icon.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-flex-layout/iron-flex-layout.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/polymer-legacy.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/legacy-element-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/entrypoints/apply-shim.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/apply-shim.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/style-util.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/style-settings.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/css-parse.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/common-regex.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/unscoped-style-handler.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/common-utils.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/template-map.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/apply-shim-utils.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/custom-style-interface.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/document-wait.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/gesture-event-listeners.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/gestures.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/debounce.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/dir-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/render-status.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/unresolved.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/polymer.dom.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/flattened-nodes-observer.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/array-splice.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/flush.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/polymer-fn.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/class.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/templatizer-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/templatize.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/mutable-data.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-bind.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-repeat.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-if.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/array-selector.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/custom-style.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/entrypoints/custom-style-interface.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/mutable-data-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-meta/iron-meta.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/my-icons.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-iconset-svg/iron-iconset-svg.js": {
       "type": "script",
       "weight": 1
     }
   },
   "src/question.js": {
-    "src/my-app.js": {
+    "node_modules/%40polymer/polymer/polymer-element.js": {
       "type": "script",
       "weight": 1
     },
-    "src/scanner.js": {
+    "node_modules/%40polymer/polymer/lib/mixins/element-mixin.js": {
       "type": "script",
       "weight": 1
     },
-    "src/solution.js": {
+    "node_modules/%40polymer/polymer/lib/utils/boot.js": {
       "type": "script",
       "weight": 1
     },
-    "src/question.js": {
+    "node_modules/%40polymer/polymer/lib/utils/settings.js": {
       "type": "script",
       "weight": 1
     },
-    "src/nexthint.js": {
+    "node_modules/%40polymer/polymer/lib/utils/resolve-url.js": {
       "type": "script",
       "weight": 1
     },
-    "src/my-view404.js": {
+    "node_modules/%40polymer/polymer/lib/utils/mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/style-gather.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-module.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-effects.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/wrap.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/path.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/case-map.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-accessors.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-changed.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/async.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/template-stamp.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/telemetry.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/html-tag.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/shared-styles.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/view-element.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/paper-button/paper-button.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-flex-layout/iron-flex-layout.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/polymer-legacy.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/legacy-element-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/entrypoints/apply-shim.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/apply-shim.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/style-util.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/style-settings.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/css-parse.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/common-regex.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/unscoped-style-handler.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/common-utils.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/template-map.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/apply-shim-utils.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/custom-style-interface.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/src/document-wait.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/gesture-event-listeners.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/gestures.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/debounce.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/dir-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/render-status.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/unresolved.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/polymer.dom.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/flattened-nodes-observer.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/array-splice.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/flush.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/polymer-fn.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/class.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/templatizer-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/templatize.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/mutable-data.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-bind.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-repeat.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-if.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/array-selector.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/custom-style.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40webcomponents/shadycss/entrypoints/custom-style-interface.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/legacy/mutable-data-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/paper-styles/element-styles/paper-material-styles.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/paper-styles/shadow.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/paper-behaviors/paper-button-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-behaviors/iron-button-state.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-behaviors/iron-control-state.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/iron-a11y-keys-behavior/iron-a11y-keys-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/paper-behaviors/paper-ripple-behavior.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/paper-ripple/paper-ripple.js": {
       "type": "script",
       "weight": 1
     }
   },
   "src/nexthint.js": {
-    "src/my-app.js": {
+    "node_modules/%40polymer/polymer/polymer-element.js": {
       "type": "script",
       "weight": 1
     },
-    "src/scanner.js": {
+    "node_modules/%40polymer/polymer/lib/mixins/element-mixin.js": {
       "type": "script",
       "weight": 1
     },
-    "src/solution.js": {
+    "node_modules/%40polymer/polymer/lib/utils/boot.js": {
       "type": "script",
       "weight": 1
     },
-    "src/question.js": {
+    "node_modules/%40polymer/polymer/lib/utils/settings.js": {
       "type": "script",
       "weight": 1
     },
-    "src/nexthint.js": {
+    "node_modules/%40polymer/polymer/lib/utils/resolve-url.js": {
       "type": "script",
       "weight": 1
     },
-    "src/my-view404.js": {
+    "node_modules/%40polymer/polymer/lib/utils/mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/style-gather.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-module.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-effects.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/wrap.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/path.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/case-map.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-accessors.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-changed.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/async.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/template-stamp.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/telemetry.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/html-tag.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/shared-styles.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "src/view-element.js": {
       "type": "script",
       "weight": 1
     }
   },
   "src/my-view404.js": {
-    "src/my-app.js": {
+    "node_modules/%40polymer/polymer/polymer-element.js": {
       "type": "script",
       "weight": 1
     },
-    "src/scanner.js": {
+    "node_modules/%40polymer/polymer/lib/mixins/element-mixin.js": {
       "type": "script",
       "weight": 1
     },
-    "src/solution.js": {
+    "node_modules/%40polymer/polymer/lib/utils/boot.js": {
       "type": "script",
       "weight": 1
     },
-    "src/question.js": {
+    "node_modules/%40polymer/polymer/lib/utils/settings.js": {
       "type": "script",
       "weight": 1
     },
-    "src/nexthint.js": {
+    "node_modules/%40polymer/polymer/lib/utils/resolve-url.js": {
       "type": "script",
       "weight": 1
     },
-    "src/my-view404.js": {
+    "node_modules/%40polymer/polymer/lib/utils/mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/style-gather.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/elements/dom-module.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-effects.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/wrap.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/path.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/case-map.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/property-accessors.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-changed.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/async.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/template-stamp.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/mixins/properties-mixin.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/telemetry.js": {
+      "type": "script",
+      "weight": 1
+    },
+    "node_modules/%40polymer/polymer/lib/utils/html-tag.js": {
       "type": "script",
       "weight": 1
     }
