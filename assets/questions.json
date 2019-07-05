@@ -4,7 +4,7 @@
             "title": "Zahlenreihe",
             "template": "question-01",
             "answer": "6",
-            "nexthint": "kitchenaid.png",
+            "nexthint": "ladenknauf.jpg",
             "link": "https://www.logisch-gedacht.de/knobeleien/zahlenreihe/"
         },
 
@@ -13,7 +13,7 @@
             "title": "Der fehlende Schlüssel",
             "template": "question-02",
             "answer": "87",
-            "nexthint": "kitchenaid.png",
+            "nexthint": "schere.jpg",
             "link": "https://www.logisch-gedacht.de/zahlenraetsel/fehlender-schluessel/"
         },
 
@@ -22,7 +22,7 @@
             "title": "Worträtsel",
             "template": "question-03",
             "answer": "Schere",
-            "nexthint": "kitchenaid.png",
+            "nexthint": "brio.jpg",
             "link": "https://www.janko.at/Raetsel/Gedichte/0338.htm"
         },
 
@@ -31,7 +31,7 @@
             "title": "Züge",
             "template": "question-04",
             "answer": "46",
-            "nexthint": "kitchenaid.png",
+            "nexthint": "eisschachtel.jpg",
             "link": "https://www.merkur.de/leben/karriere/raetselseite-sti883332/zug-raetsel-zweitklaessler-laesst-eltern-verzweifeln-zr-10220325.html"
         },
 
@@ -40,7 +40,7 @@
             "title": "Eis",
             "template": "question-05",
             "answer": "Lena",
-            "nexthint": "kitchenaid.png",
+            "nexthint": "kuchenform.jpg",
             "link": "https://www.merkur.de/leben/karriere/loesung-raetsel-eisschlange-lautet-richtige-reihenfolge-zr-10247605.html"
         },
 
@@ -49,7 +49,7 @@
             "title": "Kuchen",
             "template": "question-06",
             "answer": "Anna",
-            "nexthint": "kitchenaid.png",
+            "nexthint": "uhr.jpg",
             "link": "https://www.andinet.de/raetsel/knobelaufgaben/wer_hat_das_stueck_kuchen_gegessen.html"
         },
 
@@ -58,7 +58,7 @@
             "title": "Worträtsel",
             "template": "question-07",
             "answer": "Zeit",
-            "nexthint": "kitchenaid.png",
+            "nexthint": "teller.jpg",
             "link": "https://www.janko.at/Raetsel/Gedichte/0586.htm"
         },
 
@@ -67,7 +67,7 @@
             "title": "Essenszeit",
             "template": "question-08",
             "answer": "7",
-            "nexthint": "kitchenaid.png",
+            "nexthint": "parisuhr.jpg",
             "link": "https://www.raetselstunde.de/text-raetsel/knobelaufgaben/knobeleien-006.html"
         },
 
@@ -76,7 +76,7 @@
             "title": "Uhren",
             "template": "question-09",
             "answer": "9",
-            "nexthint": "kitchenaid.png",
+            "nexthint": "lade.jpg",
             "link": "https://www.raetselstunde.de/text-raetsel/knobelaufgaben/knobeleien-001.html"
         }
 
